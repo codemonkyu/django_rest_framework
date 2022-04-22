@@ -107,7 +107,7 @@ version: "3"
 
 services:
   mysql-svc:
-    image: ljk0509/ljk_django:mysql5.7_restv1
+    image: mysql5.7
     volumes:
       - /work/test3/db/conf:/etc/mysql/conf.d
       - /work/test3/db/data:/var/lib/mysql

@@ -5,11 +5,13 @@ FROM python:3.8
 
 WORKDIR /usr/src/app
 
+ENV PYTHONENCODING=utf-8
+
 COPY . .
 WORKDIR ./python_django_blogapp_restframework
 RUN pip install -r requirements.txt
 CMD ["python3", "manage.py", "runserver", "0:8000"]
 CMD ["bash", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
 
-
 EXPOSE 8000
+
